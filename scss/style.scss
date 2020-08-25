@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+$font-color: white;
+$font-stack: 'Poppins', sans-serif;
+$form-color: #121212;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  // background-size: cover;
+  font-family: $font-stack;
+  color: $font-color;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  box-shadow: inset 120px 100px 250px #000000;
+}
+
+.intro-content {
+  // display: none;
+  .form {
+    display: block;
+    text-align: center;
+  }
+  .search-form {
+    display: inline-block;
+    text-align: left;
+    margin: 1rem;
+    padding: 2.5rem;
+    background-color: $form-color;
+    border-radius: 20px;
+
+    .player {
+      outline: none;
+      cursor: pointer;
+      border: none;
+      background-color: #3f3b3b;
+      color: white;
+      font-size: 15px;
+      padding: 7px 30px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      margin: 0 12px;
+      padding: 7px 30px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      background-color: #3f3b3b;
+      color: white;
+    }
+
+    .btn:hover {
+      transition: all 1s ease-in;
+      background-color: #1b1b1b;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.main-content {
+  // display: none;
+  max-width: 50%;
+  margin: 5px auto;
+  padding: 10px;
+  background: $form-color;
+  border-radius: 20px;
+
+  .player-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .player-image {
+    max-width: 600px;
+    height: auto;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.br {
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+
+  .overall-stat {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(54, 108, 224);
+
+    h2,
+    h4 {
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  .stats {
+    display: grid;
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 2fr));
+    padding: 0.625rem;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      // margin: 0 1rem;
+    }
+    .wrapper:hover {
+      transition: all 2s ease-out;
+      transform: scale(1.1);
+      background-color: #1b1b1b;
+      border-radius: 16px;
+    }
+  }
+}
