@@ -91,7 +91,7 @@ function showerror() {
     if (errorDiv.classList !== errorDiv.classList.contains('hide')) {
       errorDiv.classList.add('hide');
     }
-  }, 4000);
+  }, 90000);
 }
 
 // Get Stats function
