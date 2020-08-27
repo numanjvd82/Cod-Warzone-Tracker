@@ -13,7 +13,7 @@ $form-color: #121212;
 body {
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
-  // background-size: cover;
+  background-size: cover;
   font-family: $font-stack;
   color: $font-color;
 }
@@ -31,7 +31,22 @@ body::after {
 }
 
 .intro-content {
-  // display: none;
+  .error {
+    margin: 1rem;
+    background: #121212;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 10px;
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
   .form {
     display: block;
     text-align: center;
@@ -40,7 +55,7 @@ body::after {
     display: inline-block;
     text-align: left;
     margin: 1rem;
-    padding: 2.5rem;
+    padding: 2rem;
     background-color: $form-color;
     border-radius: 20px;
 
@@ -55,6 +70,15 @@ body::after {
       border-radius: 10px;
     }
 
+    .select {
+      font-weight: 600;
+    }
+
+    .btn-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
     .btn {
       margin: 0 12px;
       padding: 7px 30px;
@@ -67,7 +91,8 @@ body::after {
 
     .btn:hover {
       transition: all 1s ease-in;
-      background-color: #1b1b1b;
+      transform: translateY(-2px);
+      filter: brightness(50%);
     }
   }
 
@@ -77,8 +102,11 @@ body::after {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .main-content {
-  // display: none;
   max-width: 50%;
   margin: 5px auto;
   padding: 10px;

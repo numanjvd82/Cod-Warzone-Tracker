@@ -9,16 +9,19 @@
   </head>
   <body>
     <header class="intro-content">
+      <div class="error hide">
+        <h3>Sorry,Error 404 Player not Found...</h3>
+      </div>
       <h1>Call of Duty Warzone Tracker</h1>
       <div class="form">
         <form class="search-form">
           <div class="search-player">
             <label>Choose Your Platform.</label>
             <select name="platfrom" id="select" class="select player">
-              <option value="Playstation">Playstation Network</option>
-              <option value="Activision">Activision ID</option>
-              <option value="Battle">Battle.net</option>
-              <option value="Xbox">Xbox Live</option>
+              <option hidden selected disabled>Select Your Platform</option>
+              <option value="psn">Playstation Network</option>
+              <option value="battle">Battle.net</option>
+              <option value="xbl">Xbox Live</option>
             </select>
             <label>Enter Your Username</label>
             <input
@@ -37,14 +40,15 @@
               class="input player"
               name="playerId"
             />
-            <button type="submit" class="btn">Search</button>
+            <div class="btn-container">
+              <button type="submit" class="btn">Search</button>
+            </div>
           </div>
         </form>
       </div>
     </header>
-
-    <!-- <section class="main-content"> -->
-    <!-- <div class="player-information">
+    <section class="main-content hide">
+      <div class="player-information">
         <div class="player-image">
           <img src="./img/player-image.jpg" alt="" />
         </div>
@@ -105,8 +109,9 @@
           </div>
         </div>
       </article>
-    </section> -->
-    <script src="./scripts/app.js"></script>
+    </section>
+
     <script src="./scripts/warzone.js"></script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>

@@ -9,6 +9,7 @@
 body {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Poppins", sans-serif;
   color: white;
 }
@@ -26,6 +27,22 @@ body::after {
           box-shadow: inset 120px 100px 250px #000000;
 }
 
+.intro-content .error {
+  margin: 1rem;
+  background: #121212;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.intro-content .error h3 {
+  text-align: center;
+}
+
+.intro-content .hide {
+  display: none;
+}
+
 .intro-content .form {
   display: block;
   text-align: center;
@@ -35,7 +52,7 @@ body::after {
   display: inline-block;
   text-align: left;
   margin: 1rem;
-  padding: 2.5rem;
+  padding: 2rem;
   background-color: #121212;
   border-radius: 20px;
 }
@@ -51,6 +68,15 @@ body::after {
   border-radius: 10px;
 }
 
+.intro-content .search-form .select {
+  font-weight: 600;
+}
+
+.intro-content .search-form .btn-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+
 .intro-content .search-form .btn {
   margin: 0 12px;
   padding: 7px 30px;
@@ -64,12 +90,19 @@ body::after {
 .intro-content .search-form .btn:hover {
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
-  background-color: #1b1b1b;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 
 .intro-content h1 {
   text-align: center;
   font-weight: 500;
+}
+
+.hide {
+  display: none;
 }
 
 .main-content {

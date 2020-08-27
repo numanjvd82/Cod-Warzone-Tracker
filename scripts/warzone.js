@@ -1,6 +1,6 @@
 // Getting the response from the api
-const getResults = async (userName, userId) => {
-  const base = `https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/${userName}%23${userId}/battle`;
+const getResults = async (userName, userId, userPlatform) => {
+  const base = `https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/${userName}%23${userId}/${userPlatform}`;
   const response = await fetch(base, {
     method: 'GET',
     headers: {
@@ -9,5 +9,6 @@ const getResults = async (userName, userId) => {
     },
   });
   const data = await response.json();
+  // console.log(data);
   return data;
 };
