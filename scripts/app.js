@@ -110,7 +110,7 @@ function getStats(e) {
     if (UI.classList !== UI.classList.contains('hide')) {
       UI.classList.add('hide');
     }
-  }, 15000);
+  }, 90000);
 
   // Calling the UI function inside updateStats promise
   updateStats(userName, userId, userPlatform)
